@@ -5,5 +5,4 @@ class Exhibit
     @name = params[:name]
     @cost = params[:cost]
   end
-
 end
