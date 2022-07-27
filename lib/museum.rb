@@ -34,5 +34,9 @@ class Museum
     output
   end
 
-
+  def ticket_lottery_contestants(exhibit)
+    patrons_by_exhibit_interest[exhibit.name].select do |patron|
+      patron.spending_money < exhibit.cost
+    end
+  end
 end
