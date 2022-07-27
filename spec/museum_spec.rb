@@ -81,5 +81,7 @@ RSpec.describe Museum do
     dmns.admit(patron_3)
 
     expect(dmns.ticket_lottery_contestants(dead_sea_scrolls)).to eq([patron_1, patron_3])
+    expect(["Johnny", "Bob"]).to include(dmns.draw_lottery_winner(dead_sea_scrolls))
+    expect(dmns.draw_lottery_winner(imax)).to be_nil
   end
 end
